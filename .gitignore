@@ -1,0 +1,23 @@
+# Virtual environment
+venv/
+__pycache__/
+
+# Environment variables
+.env
+
+# IDE settings
+.vscode/
+.idea/
+
+# OAuth / 토큰 같은 민감정보
+credentials.json
+token.json
+
+
+# DB & 로컬 데이터
+*.db
+
+# 엑셀 결과 파일
+*.xlsx
+
+

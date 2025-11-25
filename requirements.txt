@@ -1,0 +1,16 @@
+python-dotenv
+fastapi
+uvicorn
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pandas
+openpyxl
+google-generativeai
+sqlalchemy
+asyncpg
+psycopg2-binary
+httpx
+python-jose[cryptography]
+passlib
+bcrypt==3.2.0
