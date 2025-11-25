@@ -13,6 +13,12 @@ SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
 if SQLALCHEMY_DATABASE_URL is None:
     raise ValueError("DATABASE_URL 환경 변수를 설정해야 합니다.")
 
+# Render 배포 시 기본 postgresql:// 주소를 비동기 드라이버용으로 변경
+if SQLALCHEMY_DATABASE_URL.startswith("postgresql://"):
+    SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace(
+        "postgresql://", "postgresql+asyncpg://", 1
+    )
+
 engine = create_async_engine(SQLALCHEMY_DATABASE_URL)
 
 # 비동기용 세션 생성
